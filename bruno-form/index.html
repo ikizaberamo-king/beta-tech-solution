@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <form id="productForm" class="form">
+        <h2>Register Product</h2>
+
+        <div class="input-group">
+            <input type="text" id="name" required>
+            <label>Product Name</label>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="id" required>
+            <label>Product ID</label>
+        </div>
+
+        <div class="input-group">
+            <select id="category" required>
+                <option value=""></option>
+                <option>Electronics</option>
+                <option>Clothing</option>
+                <option>Food</option>
+                <option>Other</option>
+            </select>
+            <label>Category</label>
+        </div>
+
+        <div class="input-group">
+            <input type="number" id="price" required>
+            <label>Price</label>
+        </div>
+
+        <div class="input-group">
+            <input type="date" id="date" required>
+            <label class="active"></label>
+        </div>
+
+        <div class="input-group">
+            <textarea id="description"></textarea>
+            <label>Description</label>
+        </div>
+
+        <button type="submit">Submit</button>
+        <p id="successMsg"></p>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
