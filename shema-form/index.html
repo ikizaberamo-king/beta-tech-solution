@@ -1,0 +1,45 @@
+<html>
+    <link rel="stylesheet" href="styles.css">
+<div class="container">
+    <h2>🎉 Event Booking</h2>
+
+    <form id="bookingForm">
+
+        <div class="input-group">
+            <input type="text" id="name" required>
+            <label>Full Name</label>
+        </div>
+
+        <div class="input-group">
+            <input type="email" id="email" required>
+            <label>Email</label>
+        </div>
+
+        <div class="input-group">
+            <select id="event" required>
+                <option value=""></option>
+                <option>Wedding</option>
+                <option>Birthday</option>
+                <option>Conference</option>
+                <option>Concert</option>
+            </select>
+            <label>Select Event</label>
+        </div>
+
+        <div class="input-group">
+            <input type="date" id="date" required>
+            <label>Date</label>
+        </div>
+
+        <div class="input-group">
+            <input type="number" id="guests" required>
+            <label>Guests</label>
+        </div>
+
+        <button type="submit">Book Now</button>
+    </form>
+
+    <p id="message"></p>
+</div>
+<script src="script.js"></script>
+</html>
