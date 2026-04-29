@@ -1,22 +1,61 @@
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #74ebd5, #9face6);
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #1e1f20, #00f2fe);
+    color: white;
     
     /* ✅ Perfect centering */
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     margin: 0;
 }
 
+/* NAVBAR */
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+nav h2 {
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
 .container {
-    background: white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
     width: 420px;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    color: white;
 
     /* smooth effect */
     transition: 0.3s;
@@ -40,14 +79,16 @@ input, select, textarea {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(255,255,255,0.3);
     border-radius: 6px;
+    background: rgba(255,255,255,0.1);
+    color: white;
     transition: 0.3s;
 }
 
 input:focus, select:focus, textarea:focus {
-    border-color: #6c63ff;
-    box-shadow: 0 0 6px rgba(108,99,255,0.5);
+    border-color: #00f2fe;
+    box-shadow: 0 0 6px rgba(0,242,254,0.5);
     outline: none;
 }
 
@@ -55,8 +96,8 @@ input:focus, select:focus, textarea:focus {
 button {
     width: 100%;
     padding: 10px;
-    background: #6c63ff;
-    color: white;
+    background: #00f2fe;
+    color: #1e1f20;
     border: none;
     border-radius: 6px;
     font-size: 16px;
@@ -65,7 +106,7 @@ button {
 }
 
 button:hover {
-    background: #4b42d1;
+    background: #00d4e0;
     transform: scale(1.05);
 }
 
@@ -101,6 +142,16 @@ button:hover {
     100% { transform: translateX(0); }
 }
 
-.shake {
-    animation: shake 0.3s;
+/* RESPONSIVE */
+@media(max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }

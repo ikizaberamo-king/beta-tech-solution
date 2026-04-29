@@ -1,20 +1,59 @@
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #1e1f20, #00f2fe);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+nav h2 {
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
 }
 
 /* Container entrance */
 .container {
-    background: white;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
     padding: 30px;
     border-radius: 15px;
     width: 320px;
     text-align: center;
     animation: slideUp 0.8s ease;
+    color: white;
 }
 
 /* Floating input group */
@@ -27,9 +66,11 @@ body {
 .input-group select {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(255,255,255,0.3);
     border-radius: 6px;
     outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
 }
 
 /* Floating label */
@@ -37,10 +78,10 @@ body {
     position: absolute;
     left: 12px;
     top: 12px;
-    color: gray;
+    color: rgba(255,255,255,0.7);
     font-size: 14px;
     transition: 0.3s;
-    background: white;
+    background: transparent;
     padding: 0 5px;
 }
 
@@ -50,7 +91,7 @@ body {
 .input-group select:valid + label {
     top: -8px;
     font-size: 12px;
-    color: #667eea;
+    color: #00f2fe;
 }
 
 /* Button ripple effect */
@@ -59,8 +100,8 @@ button {
     padding: 12px;
     border: none;
     border-radius: 6px;
-    background: #667eea;
-    color: white;
+    background: #00f2fe;
+    color: #1e1f20;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -68,7 +109,7 @@ button {
 }
 
 button:hover {
-    background: #764ba2;
+    background: #00d4e0;
     transform: scale(1.05);
 }
 
@@ -117,4 +158,18 @@ button:active::after {
     50% { transform: translateX(5px); }
     75% { transform: translateX(-5px); }
     100% { transform: translateX(0); }
+}
+
+/* RESPONSIVE */
+@media(max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
