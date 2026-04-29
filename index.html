@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beta-Tech-Solution</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+body {
+    background: linear-gradient(135deg, #1e1f20, #00f2fe);
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+nav h2 {
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* HERO SECTION */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* ABOUT SECTION */
+.about {
+    padding: 60px 20px;
+    background: rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}/* ABOUT SECTION */
+.about {
+    position: relative; /* important */
+    padding: 60px 20px;
+    background: rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* FEEDBACK BUTTON */
+.feedback-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ffffff;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.feedback-btn:hover {
+    background: #ddd;
+}
+</style>
+</head>
+
+<body>
+
+
+<nav>
+    <h2>Beta-Tech-Solution</h2>
+    <ul>
+        <li><a href="loic-login/index.html">login now</a></li>
+        <li><a href="moise- employee register form/index.html">become a developer</a></li>
+        <li><a href="shema-form/index.html">event booking</a></li>
+        <li><a href="bruno-form/index.html">product</a></li>
+        
+    </ul>
+</nav>
+
+
+<section class="hero">
+    <h1>Welcome to Beta-Tech-Solution</h1>
+    <p>Smart digital platform for students, teachers, parents, and administrators. </p>
+</section>
+
+<section class="about">
+
+    <a href="feedback.html" class="feedback-btn">💬 Give Feedback</a>
+
+    <h2>Developer Job Finder</h2>
+    <p>
+        Beta-Tech-Solution is a modern platform designed to help developers find job opportunities 
+        quickly and efficiently. Whether you're a beginner or an experienced programmer, 
+        our system connects you with companies looking for your skills.
+    </p>
+
+    <p>
+        Users can explore job listings, apply for positions, and stay updated with the latest 
+        opportunities in the tech industry. Our goal is to make job searching simple, fast, 
+        and accessible for every developer.
+    </p>
+
+</section>

@@ -2,17 +2,45 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
-    height: 100vh;
-    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c92d2);
-    background-size: 400% 400%;
-    animation: gradientMove 10s ease infinite;
+    background: linear-gradient(135deg, #1e1f20, #00f2fe);
+    color: white;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px 50px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+nav h2 {
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
 }
 
 /* Background animation */
@@ -25,6 +53,8 @@ body {
 .container {
     width: 100%;
     max-width: 400px;
+    margin: 0 auto;
+    padding-top: 100px; /* to account for nav */
 }
 
 .form {
@@ -112,9 +142,19 @@ button:hover {
     background: #0f2027;
 }
 
-#successMsg {
-    text-align: center;
-    margin-top: 15px;
-    color: #00ffcc;
-    font-size: 14px;
+/* RESPONSIVE */
+@media(max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        padding-top: 150px;
+    }
 }

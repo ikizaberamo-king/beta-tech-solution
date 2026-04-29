@@ -1,13 +1,41 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #111827);
-    background-size: 400% 400%;
-    animation: bg 10s ease infinite;
-    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #1e1f20, #00f2fe);
+    color: white;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px 50px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+nav h2 {
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
 }
 
 @keyframes bg {
@@ -20,6 +48,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-top: 100px; /* account for nav */
 }
 
 .login-box {
@@ -90,4 +119,21 @@ button:hover {
     color: #f87171;
     margin-top: 10px;
     font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        padding-top: 150px;
+    }
 }
