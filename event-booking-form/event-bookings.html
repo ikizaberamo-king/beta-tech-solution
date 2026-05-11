@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bookings - Beta-Tech-Solution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+    <h2>Beta-Tech-Solution</h2>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html">Book Event</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="bookings-header">
+        <h1>All Event Bookings</h1>
+        <p>View all booked events and their details</p>
+    </div>
+
+    <div id="bookingsContainer">
+        <!-- Bookings will be loaded here -->
+    </div>
+
+    <div id="noBookings" class="no-bookings" style="display: none;">
+        <h3>No Event Bookings Yet</h3>
+        <p>When events are booked, they will appear here.</p>
+        <a href="index.html" class="book-event-btn">Book Your First Event</a>
+    </div>
+</div>
+
+<script src="bookings-script.js"></script>
+</body>
+</html>

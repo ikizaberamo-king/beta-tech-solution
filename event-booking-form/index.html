@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+    <h2>Beta-Tech-Solution</h2>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="event-bookings.html">View Bookings</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <!-- Form Section -->
+    <div class="form-section" id="formSection">
+        <form id="eventForm" class="form">
+            <h2>Event Booking Form</h2>
+
+            <div class="input-group">
+                <input type="text" id="eventName" required>
+                <label>Event Name</label>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <input type="date" id="eventDate" required>
+                    <label>Event Date</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="time" id="eventTime" required>
+                    <label>Event Time</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="location" required>
+                <label>Location</label>
+            </div>
+
+            <div class="input-group">
+                <select id="eventType" required>
+                    <option value=""></option>
+                    <option>Conference</option>
+                    <option>Workshop</option>
+                    <option>Seminar</option>
+                    <option>Meeting</option>
+                    <option>Webinar</option>
+                    <option>Party</option>
+                    <option>Other</option>
+                </select>
+                <label>Event Type</label>
+            </div>
+
+            <div class="input-group">
+                <input type="number" id="attendees" min="1" required>
+                <label>Number of Attendees</label>
+            </div>
+
+            <div class="input-group">
+                <textarea id="description" rows="4"></textarea>
+                <label>Event Description (Optional)</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="organizer" required>
+                <label>Organizer Name</label>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <input type="email" id="email" required>
+                    <label>Contact Email</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="tel" id="phone" required>
+                    <label>Phone Number</label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Book Event</button>
+            <div id="successMsg" class="success-msg"></div>
+            <div id="quickActions" class="quick-actions" style="display: none;">
+                <button class="quick-book-btn" onclick="quickBookAnother()">Book Another Event</button>
+                <button class="view-all-btn" onclick="viewAllBookings()">View All Bookings</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Display Section -->
+    <div class="display-section" id="displaySection" style="display: none;">
+        <div class="display-card">
+            <h2>Event Booking Confirmation</h2>
+            
+            <div class="display-grid">
+                <div class="display-item">
+                    <label>Event Name:</label>
+                    <p id="dispEventName"></p>
+                </div>
+
+                <div class="display-item">
+                    <label>Event Date:</label>
+                    <p id="dispEventDate"></p>
+                </div>
+
+                <div class="display-item">
+                    <label>Event Time:</label>
+                    <p id="dispEventTime"></p>
+                </div>
+
+                <div class="display-item">
+                    <label>Location:</label>
+                    <p id="dispLocation"></p>
+                </div>
+
+                <div class="display-item">
+                    <label>Event Type:</label>
+                    <p id="dispEventType"></p>
+                </div>
+
+                <div class="display-item">
+                    <label>Number of Attendees:</label>
+                    <p id="dispAttendees"></p>
+                </div>
+
+                <div class="display-item">
+                    <label>Event Description:</label>
+                    <p id="dispDescription"></p>
+                </div>
+
+                <div class="display-item">
+                    <label>Organizer Name:</label>
+                    <p id="dispOrganizer"></p>
+                </div>
+
+                <div class="display-item">
+                    <label>Contact Email:</label>
+                    <p id="dispEmail"></p>
+                </div>
+
+                <div class="display-item">
+                    <label>Phone Number:</label>
+                    <p id="dispPhone"></p>
+                </div>
+            </div>
+
+            <button class="edit-btn" onclick="editForm()">Edit Details</button>
+            <button class="book-another-btn" onclick="bookAnotherEvent()">Book Another Event</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
