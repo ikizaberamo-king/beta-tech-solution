@@ -9,6 +9,7 @@ form.addEventListener("submit", function(e) {
     const category = document.getElementById("category").value;
     const price = document.getElementById("price").value;
     const date = document.getElementById("date").value;
+    const description = document.getElementById("description").value.trim();
 
     // Simple validation
     if (!name || !id || !category || !price || !date) {
@@ -20,6 +21,22 @@ form.addEventListener("submit", function(e) {
         showMessage("Price must be greater than 0 ❌", "red");
         return;
     }
+
+    // Create product object
+    const product = {
+        id: Date.now(),
+        name: name,
+        productId: id,
+        category: category,
+        price: price,
+        date: date,
+        description: description
+    };
+
+    // Save to localStorage
+    let products = JSON.parse(localStorage.getItem("products")) || [];
+    products.push(product);
+    localStorage.setItem("products", JSON.stringify(products));
 
     // Success animation
     showMessage("Product Registered Successfully ✅", "#00ffcc");
