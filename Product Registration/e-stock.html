@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Stock - E-Stock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="e-stock-styles.css">
+</head>
+<body>
+
+<nav>
+    <h2>Beta-Tech-Solution</h2>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html">Register Product</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="header">
+        <h2>📦 Product Stock (E-Stock)</h2>
+        <p id="totalProducts">Total Products: 0</p>
+    </div>
+
+    <div class="filters">
+        <input type="text" id="searchBox" placeholder="Search by product name or ID...">
+        <select id="categoryFilter">
+            <option value="">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Food">Food</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <div id="productsContainer" class="products-grid">
+        <p class="no-products">No products registered yet. <a href="index.html">Register a product</a></p>
+    </div>
+</div>
+
+<script src="e-stock-script.js"></script>
+</body>
+</html>
