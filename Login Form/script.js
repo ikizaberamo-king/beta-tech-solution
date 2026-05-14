@@ -18,7 +18,7 @@ function login() {
     if (!username || !password) {
         msg.innerText = "⚠ Please fill all fields";
         shake(box);
-        return;
+        return false;
     }
 
     // loading effect
@@ -39,14 +39,16 @@ function login() {
             setTimeout(() => {
                 const query = `?username=${encodeURIComponent(username)}&role=${encodeURIComponent(user.role)}`;
                 window.location.href = "home.html" + query;
-            }, 700);
+            }, 200);
 
         } else {
             msg.innerText = "❌ Invalid login details";
             shake(box);
         }
 
-    }, 1200);
+    }, 500);
+
+    return false;
 }
 
 // shake effect function
