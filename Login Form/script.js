@@ -35,13 +35,11 @@ function login() {
             msg.style.color = "lightgreen";
             msg.innerText = "Login successful ✔";
 
-            // save session (like real apps)
-            localStorage.setItem("betaUser", JSON.stringify(user));
-
-            // redirect
+            // redirect with in-memory session info using query params
             setTimeout(() => {
-                window.location.href = "home.html";
-            }, 1000);
+                const query = `?username=${encodeURIComponent(username)}&role=${encodeURIComponent(user.role)}`;
+                window.location.href = "home.html" + query;
+            }, 700);
 
         } else {
             msg.innerText = "❌ Invalid login details";
@@ -59,10 +57,7 @@ function shake(element) {
     }, 300);
 }
 
-// auto login check (session system)
+// no auto-login storage; refresh clears the in-memory session
 window.onload = () => {
-    const session = localStorage.getItem("betaUser");
-    if (session) {
-        window.location.href = "home.html";
-    }
+    // keep login page fresh
 };
