@@ -22,11 +22,11 @@
 
 <div class="container">
 
-    <div class="login-box">
+    <div class="login-box" id="loginBox">
         <h1 class="logo">Beta Tech</h1>
         <p class="tagline">Welcome back </p>
 
-        <form onsubmit="return loginUser()">
+        <form onsubmit="return login()">
 
             <div class="input-box">
                 <i class="fa fa-user"></i>
@@ -40,7 +40,7 @@
 
             <button type="submit">Login</button>
 
-            <p id="error"></p>
+            <p id="msg"></p>
 
         </form>
     </div>
